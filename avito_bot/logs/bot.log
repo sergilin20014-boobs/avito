@@ -1,0 +1,3 @@
+2026-05-31 12:00:13 | INFO     | logging_setup | Логирование: level=INFO, файл=C:\Users\Сергей\Downloads\avito_bot_v3\avito_bot\logs\bot.log
+2026-05-31 12:00:13 | INFO     | avito        | test message
+2026-05-31 12:00:13 | WARNING  | avito        | test warn

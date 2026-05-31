@@ -1,11 +1,10 @@
 """
 handlers/start.py — /start, обработка диплинка Авито и выбор Опт/Розница.
 
-v3:
-  - При /start бот проверяет телефон пользователя в БД.
-  - Если телефон найден — подтягивает данные в FSM (пропустит шаг телефона при заказе).
+v4:
+  - При /start бот сразу показывает главное меню (телефон не требуется).
+  - Телефон запрашивается только когда реально нужен — перед подтверждением заказа.
   - Диплинк avito_{chat_id} — сразу к форме заказа.
-  - Обычный старт — запрос контакта → проверка Авито-записи или стандартный флоу.
   - FAQ доступен с главного меню.
 """
 import logging
@@ -34,20 +33,22 @@ async def cmd_start(message: Message, state: FSMContext) -> None:
     user = message.from_user
     args: str = message.text.split(maxsplit=1)[1] if " " in message.text else ""
 
+    logger.info("Команда /start: user=%s @%s args=%r", user.id, user.username or "—", args)
+
     # ── Путь 1: диплинк Авито ─────────────────────────────────────────────────
     if args.startswith("avito_"):
         avito_chat_id = args[len("avito_"):]
         await _handle_avito_deeplink(message, state, avito_chat_id)
         return
 
-    # ── Путь 2: обычный старт — создаём/обновляем запись, запрашиваем контакт
+    # ── Путь 2: обычный старт — сразу в главное меню, телефон не требуем ─────
     await upsert_user(user_id=user.id, username=user.username)
     await message.answer(
         "👋 Привет! Я помогу оформить заказ на кастомные автономера и рамки.\n\n"
-        "Для начала поделитесь номером телефона — это ускорит оформление:",
-        reply_markup=kb_phone_request(),
+        "Выберите тип покупки:",
+        reply_markup=kb_main_menu(),
     )
-    # Не ставим FSM-состояние сразу — ждём контакт (F.contact)
+    await state.set_state(MainMenu.choosing_type)
 
 
 async def _handle_avito_deeplink(
@@ -89,10 +90,12 @@ async def _handle_avito_deeplink(
     from keyboards import kb_back
     await message.answer("◀️ Навигация:", reply_markup=kb_back())
     await state.set_state(OrderForm.waiting_for_text_or_file)
-    logger.info("Deeplink: tg=%s → avito_chat=%s", message.from_user.id, avito_chat_id)
+    logger.info("Deeplink Авито: tg=%s → avito_chat=%s", message.from_user.id, avito_chat_id)
 
 
-# ─── Получение контакта ───────────────────────────────────────────────────────
+# ─── Получение контакта (теперь только из шага телефона в заказе) ─────────────
+# Хэндлер F.contact оставлен для случаев когда пользователь
+# всё-таки нажмёт «Поделиться номером» если она где-то показана.
 
 @router.message(F.contact)
 async def handle_contact(message: Message, state: FSMContext) -> None:
@@ -139,12 +142,12 @@ async def handle_contact(message: Message, state: FSMContext) -> None:
         await message.answer("◀️ Навигация:", reply_markup=kb_back())
         await state.set_state(OrderForm.waiting_for_text_or_file)
         logger.info(
-            "Contact: tg=%s → avito_chat=%s phone=%s",
+            "Контакт: tg=%s → avito_chat=%s phone=%s",
             message.from_user.id, avito_chat_id, phone,
         )
 
     else:
-        # Новый клиент — стандартный флоу с меню
+        # Новый клиент — сохраняем телефон и показываем главное меню
         await state.update_data(phone=phone, _tg_id=message.from_user.id)
         await message.answer(
             "👋 Отлично! Теперь выберите тип покупки:",
@@ -152,6 +155,7 @@ async def handle_contact(message: Message, state: FSMContext) -> None:
         )
         await message.answer("⬇️", reply_markup=kb_main_menu())
         await state.set_state(MainMenu.choosing_type)
+        logger.info("Новый клиент: tg=%s phone=%s", message.from_user.id, phone)
 
 
 def _normalize_phone(raw: str) -> str:

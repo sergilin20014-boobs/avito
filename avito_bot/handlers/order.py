@@ -313,7 +313,7 @@ async def confirm_order(call: CallbackQuery, state: FSMContext, bot: Bot) -> Non
     data = await state.get_data()
     qty = data.get("quantity", 1)
     product_label = data.get("product_label") or get_product_label(data.get("subcategory", ""))
-
+ 
     order_data = {
         "user_id": call.from_user.id,
         "username": call.from_user.username or str(call.from_user.id),
@@ -338,17 +338,24 @@ async def confirm_order(call: CallbackQuery, state: FSMContext, bot: Bot) -> Non
         "doc_file_id": data.get("doc_file_id", ""),
         "status": "new",
     }
-
+ 
     order_id = await create_order(order_data)
     order_data["id"] = order_id
     order_data["product_label"] = product_label
     order_data["quantity"] = qty
-
+ 
+    # Сохраняем телефон — он нужен при следующем заказе, не спрашиваем снова
+    phone = data.get("phone", "")
+    client_type = data.get("client_type", "retail")
+    source = data.get("source", "telegram")
+    avito_chat_id = data.get("avito_chat_id", "")
+    avito_shop = data.get("avito_shop", "")
+ 
     logger.info(
         "Заказ #%s создан: user=%s source=%s delivery=%s",
         order_id, call.from_user.id, order_data["source"], order_data["delivery_type"],
     )
-
+ 
     await call.message.edit_text(
         f"✅ <b>Заказ #{order_id} принят!</b>\n\n"
         "Менеджер свяжется с вами в ближайшее время.\n"
@@ -359,22 +366,59 @@ async def confirm_order(call: CallbackQuery, state: FSMContext, bot: Bot) -> Non
         parse_mode="HTML",
         reply_markup=None,
     )
-    await call.message.answer("🏁 Готово!", reply_markup=remove_kb())
-
+ 
     await notify_admin_new_order(bot, order_data)
-
+ 
     try:
         await append_order_to_sheet(order_data)
     except Exception as e:
         logger.error("Ошибка записи заказа в Sheets: %s", e)
-
+ 
+    # Очищаем FSM, но сохраняем телефон и тип клиента — не спрашиваем снова
     await state.clear()
+    if phone:
+        await state.update_data(phone=phone)
+    if client_type:
+        await state.update_data(client_type=client_type)
+    if source == "avito":
+        await state.update_data(source=source, avito_chat_id=avito_chat_id, avito_shop=avito_shop)
+ 
+    # Возвращаем пользователя в главное меню с кнопками
+    from keyboards import kb_main_menu
+    await call.message.answer(
+        "🏠 <b>Главное меню</b>\n\nХотите оформить ещё один заказ?",
+        reply_markup=kb_main_menu(),
+        parse_mode="HTML",
+    )
+    from states import MainMenu
+    await state.set_state(MainMenu.choosing_type)
+ 
     await call.answer("Заказ оформлен!")
-
-
+ 
+ 
 @router.callback_query(OrderForm.confirming_order, F.data == "order:cancel")
 async def cancel_order(call: CallbackQuery, state: FSMContext) -> None:
+    data = await state.get_data()
+    phone = data.get("phone", "")
+    client_type = data.get("client_type", "")
+ 
     await state.clear()
-    await call.message.edit_text("❌ Заказ отменён. Напишите /start чтобы начать заново.")
-    await call.message.answer("🏁", reply_markup=remove_kb())
+    if phone:
+        await state.update_data(phone=phone)
+    if client_type:
+        await state.update_data(client_type=client_type)
+ 
+    from keyboards import kb_main_menu
+    await call.message.edit_text(
+        "❌ <b>Заказ отменён.</b>",
+        parse_mode="HTML",
+        reply_markup=None,
+    )
+    await call.message.answer(
+        "🏠 <b>Главное меню</b>\n\nВыберите тип покупки:",
+        reply_markup=kb_main_menu(),
+        parse_mode="HTML",
+    )
+    from states import MainMenu
+    await state.set_state(MainMenu.choosing_type)
     await call.answer()

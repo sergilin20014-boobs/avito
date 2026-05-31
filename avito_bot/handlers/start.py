@@ -3,9 +3,9 @@ handlers/start.py — /start, обработка диплинка Авито и 
 
 v4:
   - При /start бот сразу показывает главное меню (телефон не требуется).
+  - Если телефон уже есть в FSM — не теряем его при повторном /start.
   - Телефон запрашивается только когда реально нужен — перед подтверждением заказа.
   - Диплинк avito_{chat_id} — сразу к форме заказа.
-  - FAQ доступен с главного меню.
 """
 import logging
 from aiogram import Router, F
@@ -29,11 +29,23 @@ router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext) -> None:
-    await state.clear()
     user = message.from_user
     args: str = message.text.split(maxsplit=1)[1] if " " in message.text else ""
 
     logger.info("Команда /start: user=%s @%s args=%r", user.id, user.username or "—", args)
+
+    # Сохраняем телефон ДО clear — чтобы не потерять его между заказами
+    old_data = await state.get_data()
+    saved_phone = old_data.get("phone", "")
+    saved_client_type = old_data.get("client_type", "")
+
+    await state.clear()
+
+    # Восстанавливаем телефон и тип клиента если были
+    if saved_phone:
+        await state.update_data(phone=saved_phone)
+    if saved_client_type:
+        await state.update_data(client_type=saved_client_type)
 
     # ── Путь 1: диплинк Авито ─────────────────────────────────────────────────
     if args.startswith("avito_"):
@@ -93,9 +105,7 @@ async def _handle_avito_deeplink(
     logger.info("Deeplink Авито: tg=%s → avito_chat=%s", message.from_user.id, avito_chat_id)
 
 
-# ─── Получение контакта (теперь только из шага телефона в заказе) ─────────────
-# Хэндлер F.contact оставлен для случаев когда пользователь
-# всё-таки нажмёт «Поделиться номером» если она где-то показана.
+# ─── Получение контакта ───────────────────────────────────────────────────────
 
 @router.message(F.contact)
 async def handle_contact(message: Message, state: FSMContext) -> None:
@@ -108,7 +118,6 @@ async def handle_contact(message: Message, state: FSMContext) -> None:
     avito_record = await get_user_by_phone(phone)
 
     if avito_record:
-        # Клиент уже оставлял заявку на Авито — пропускаем выбор категорий
         avito_chat_id = avito_record.get("avito_chat_id", "")
         await upsert_user(
             user_id=message.from_user.id,

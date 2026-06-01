@@ -160,10 +160,15 @@ async def catalog_back_reply(message: Message, state: FSMContext) -> None:
 
     await _show_node(message, state, parent)
 
-@router.callback_query(MainMenu.choosing_type, F.data.startswith("type:"))
+@router.callback_query(F.data.startswith("type:"))
 async def enter_catalog(message_or_call, state: FSMContext) -> None:
     """Точка входа в каталог после выбора Опт/Розница."""
+    # Сразу жестко переводим в стейт каталога, чтобы снять блокировку
+    await state.set_state(Catalog.browsing)
+    await state.update_data(catalog_node="root")
+
     if isinstance(message_or_call, CallbackQuery):
+        await message_or_call.answer()
         await message_or_call.message.edit_text(
             "📦 <b>Каталог</b>\n\nВыберите категорию товара:",
             reply_markup=build_catalog_keyboard("root"),
@@ -176,7 +181,7 @@ async def enter_catalog(message_or_call, state: FSMContext) -> None:
             reply_markup=build_catalog_keyboard("root"),
             parse_mode="HTML",
         )
-        await message_or_call.answer("◀️ Навигация:", reply_markup=kb_back())
+        await message_or_call.answer("◀️ Навигация:", reply_markup=kb_back())                
 
     await state.update_data(catalog_node="root")
     await state.set_state(Catalog.browsing)

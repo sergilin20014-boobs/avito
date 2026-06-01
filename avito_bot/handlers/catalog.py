@@ -79,20 +79,49 @@ async def _start_order_form(target: CallbackQuery, state: FSMContext, leaf_id: s
     await target.answer()
 
 
-@router.callback_query(Catalog.browsing, F.data.startswith("cat:"))
+@router.callback_query(Catalog.browsing)
 async def catalog_select(call: CallbackQuery, state: FSMContext) -> None:
-    node_id = parse_select_callback(call.data)
-    if not node_id or node_id not in NODES:
-        await call.answer("Неизвестный пункт меню.", show_alert=True)
-        return
-
-    node = NODES[node_id]
-    if node.is_leaf:
-        await _start_order_form(call, state, node_id)
-        return
-
-    await _show_node(call, state, node_id, edit=True)
+    """Глобальный обработчик навигации по каталогу."""
+    # Логируем для отладки, чтобы увидеть, что прилетело в call.data
+    logger.info(f"=== МЫ ВНУТРИ ХЕНДЛЕРА КАТАЛОГА! call.data: {call.data} ===")
+    
     await call.answer()
+    
+    if call.data == CB_BACK:
+        data = await state.get_data()
+        current = data.get("catalog_node", "root")
+        parent = get_parent_id(current)
+        if not parent or current == "root":
+            await call.message.edit_text("Выберите тип покупки:", reply_markup=kb_main_menu())
+            await state.set_state(MainMenu.choosing_type)
+            return
+        await _show_node(call, state, parent, edit=True)
+        return
+
+    if call.data == CB_HOME:
+        await call.message.edit_text("Выберите тип покупки:", reply_markup=kb_main_menu())
+        await state.set_state(MainMenu.choosing_type)
+        return
+
+    # Ловим выбор категории/подкатегории
+    node_id = parse_select_callback(call.data)
+    if not node_id:
+        # Если префикс кента не распарсился, пробуем забрать весь data как id узла
+        node_id = call.data.replace("cat:s:", "").replace("cat:", "")
+        
+    if node_id in NODES:
+        node = NODES[node_id]
+        if node.is_leaf:
+            # Если это конечный товар — переводим на оформление заказа
+            await state.update_data(subcategory=node_id, category=get_parent_id(node_id) or "numbers")
+            await call.message.delete()
+            from handlers.order import start_order_flow
+            await start_order_flow(call.message, state)
+        else:
+            # Иначе прем дальше по дереву каталога
+            await _show_node(call, state, node_id, edit=True)
+    else:
+        logger.warning(f"Узел каталога не найден в NODES: {node_id}")
 
 
 @router.callback_query(Catalog.browsing, F.data == CB_BACK)

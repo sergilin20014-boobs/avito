@@ -162,24 +162,3 @@ def _normalize_phone(raw: str) -> str:
     elif len(digits) == 10:
         digits = '7' + digits
     return digits
-
-
-# ─── Выбор Опт / Розница ─────────────────────────────────────────────────────
-
-@router.callback_query(MainMenu.choosing_type, F.data.in_({"type:opt", "type:retail"}))
-async def choose_type(call: CallbackQuery, state: FSMContext) -> None:
-    client_type = "opt" if call.data == "type:opt" else "retail"
-    label = "Опт 🏭" if client_type == "opt" else "Розница 🛍️"
-
-    await state.update_data(client_type=client_type)
-    await upsert_user(
-        user_id=call.from_user.id,
-        username=call.from_user.username,
-        client_type=client_type,
-    )
-    await call.message.edit_text(
-        f"✅ Выбрано: <b>{label}</b>\n\nОткрываем каталог…",
-        parse_mode="HTML",
-    )
-    await enter_catalog(call, state)
-    await call.answer()

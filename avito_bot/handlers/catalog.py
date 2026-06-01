@@ -181,7 +181,7 @@ async def enter_catalog(message_or_call, state: FSMContext) -> None:
             reply_markup=build_catalog_keyboard("root"),
             parse_mode="HTML",
         )
-        await message_or_call.answer("◀️ Навигация:", reply_markup=kb_back())                
+        await message_or_call.answer("◀️ Навигация:", reply_markup=kb_back())               
 
     await state.update_data(catalog_node="root")
     await state.set_state(Catalog.browsing)

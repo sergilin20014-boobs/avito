@@ -94,8 +94,8 @@ async def main() -> None:
     dp.include_router(manager.router)
     dp.include_router(faq.router)
     dp.include_router(start.router)
-    dp.include_router(catalog.router)
     dp.include_router(delivery.router)
+    dp.include_router(catalog.router)
     dp.include_router(order.router)
     dp.include_router(admin.router)
 

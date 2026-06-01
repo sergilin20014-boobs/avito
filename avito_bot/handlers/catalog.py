@@ -160,7 +160,7 @@ async def catalog_back_reply(message: Message, state: FSMContext) -> None:
 
     await _show_node(message, state, parent)
 
-
+@router.callback_query(MainMenu.choosing_type, F.data.startswith("type:"))
 async def enter_catalog(message_or_call, state: FSMContext) -> None:
     """Точка входа в каталог после выбора Опт/Розница."""
     if isinstance(message_or_call, CallbackQuery):

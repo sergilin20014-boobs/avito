@@ -79,7 +79,7 @@ async def _start_order_form(target: CallbackQuery, state: FSMContext, leaf_id: s
     await target.answer()
 
 
-@router.callback_query(Catalog.browsing, F.data.startswith(CB_SELECT))
+@router.callback_query(Catalog.browsing, F.data.startswith("cat:"))
 async def catalog_select(call: CallbackQuery, state: FSMContext) -> None:
     node_id = parse_select_callback(call.data)
     if not node_id or node_id not in NODES:

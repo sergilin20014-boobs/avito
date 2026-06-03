@@ -1,0 +1,315 @@
+2026-05-31 12:13:49,179 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:13:49,184 [INFO] __main__ — Webhook-сервер запущен: http://0.0.0.0:8080/webhooks/avito
+2026-05-31 12:13:49,184 [INFO] __main__ — Бот запущен. Polling + Webhook работают параллельно...
+2026-05-31 12:13:49,184 [INFO] aiogram.dispatcher — Start polling
+2026-05-31 12:13:49,313 [INFO] aiogram.dispatcher — Run polling for bot @avtonomera97_bot id=8560066018 - 'avtonomera97'
+2026-05-31 12:13:58,733 [INFO] aiogram.event — Update id=743996616 is handled. Duration 178 ms by bot id=8560066018
+2026-05-31 12:14:03,815 [INFO] aiogram.event — Update id=743996617 is handled. Duration 135 ms by bot id=8560066018
+2026-05-31 12:14:05,155 [INFO] aiogram.event — Update id=743996618 is handled. Duration 145 ms by bot id=8560066018
+2026-05-31 12:14:06,806 [INFO] aiogram.event — Update id=743996619 is handled. Duration 166 ms by bot id=8560066018
+2026-05-31 12:14:08,475 [INFO] aiogram.event — Update id=743996620 is handled. Duration 209 ms by bot id=8560066018
+2026-05-31 12:14:09,542 [INFO] aiogram.event — Update id=743996621 is handled. Duration 119 ms by bot id=8560066018
+2026-05-31 12:14:10,534 [INFO] aiogram.event — Update id=743996622 is handled. Duration 144 ms by bot id=8560066018
+2026-05-31 12:14:12,204 [INFO] handlers.admin — Уведомление об заказе #1 отправлено менеджеру.
+2026-05-31 12:14:13,239 [INFO] services.sheets — [Google Sheets] Заказ #1 записан.
+2026-05-31 12:14:13,297 [INFO] aiogram.event — Update id=743996623 is handled. Duration 1263 ms by bot id=8560066018
+2026-05-31 12:14:19,315 [INFO] aiogram.event — Update id=743996624 is handled. Duration 75 ms by bot id=8560066018
+2026-05-31 12:24:29,443 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:24:50,555 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:25:01,741 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:25:39,871 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:25:39,876 [INFO] __main__ — Webhook-сервер запущен: http://0.0.0.0:8080/webhooks/avito
+2026-05-31 12:25:39,876 [INFO] __main__ — Бот запущен. Polling + Webhook работают параллельно...
+2026-05-31 12:25:39,877 [INFO] aiogram.dispatcher — Start polling
+2026-05-31 12:25:40,029 [INFO] aiogram.dispatcher — Run polling for bot @avtonomera97_bot id=8560066018 - 'avtonomera97'
+2026-05-31 12:25:58,388 [INFO] aiogram.event — Update id=743996625 is handled. Duration 176 ms by bot id=8560066018
+2026-05-31 12:26:02,014 [INFO] aiogram.event — Update id=743996626 is handled. Duration 75 ms by bot id=8560066018
+2026-05-31 12:26:04,828 [INFO] aiogram.event — Update id=743996627 is handled. Duration 181 ms by bot id=8560066018
+2026-05-31 12:26:06,417 [INFO] aiogram.event — Update id=743996628 is handled. Duration 125 ms by bot id=8560066018
+2026-05-31 12:26:08,700 [INFO] aiogram.event — Update id=743996629 is handled. Duration 135 ms by bot id=8560066018
+2026-05-31 12:26:10,195 [INFO] aiogram.event — Update id=743996630 is handled. Duration 125 ms by bot id=8560066018
+2026-05-31 12:26:11,346 [INFO] aiogram.event — Update id=743996631 is handled. Duration 188 ms by bot id=8560066018
+2026-05-31 12:26:12,853 [INFO] aiogram.event — Update id=743996632 is handled. Duration 291 ms by bot id=8560066018
+2026-05-31 12:26:14,592 [INFO] handlers.admin — Уведомление об заказе #2 отправлено менеджеру.
+2026-05-31 12:26:15,721 [INFO] services.sheets — [Google Sheets] Заказ #2 записан.
+2026-05-31 12:26:15,782 [INFO] aiogram.event — Update id=743996633 is handled. Duration 1339 ms by bot id=8560066018
+2026-05-31 12:27:05,506 [INFO] aiogram.event — Update id=743996634 is handled. Duration 168 ms by bot id=8560066018
+2026-05-31 12:30:44,690 [INFO] __main__ — БД инициализирована.
+2026-05-31 12:30:44,695 [INFO] __main__ — Webhook-сервер запущен: http://0.0.0.0:8080/webhooks/avito
+2026-05-31 12:30:44,695 [INFO] __main__ — Бот запущен. Polling + Webhook работают параллельно...
+2026-05-31 12:30:44,695 [INFO] aiogram.dispatcher — Start polling
+2026-05-31 12:30:44,835 [INFO] aiogram.dispatcher — Run polling for bot @avtonomera97_bot id=8560066018 - 'avtonomera97'
+2026-05-31 12:30:54,769 [INFO] aiogram.event — Update id=743996635 is handled. Duration 189 ms by bot id=8560066018
+2026-05-31 12:30:58,493 [INFO] aiogram.event — Update id=743996636 is handled. Duration 84 ms by bot id=8560066018
+2026-05-31 12:31:00,109 [INFO] aiogram.event — Update id=743996637 is handled. Duration 148 ms by bot id=8560066018
+2026-05-31 12:31:01,560 [INFO] aiogram.event — Update id=743996638 is handled. Duration 164 ms by bot id=8560066018
+2026-05-31 12:31:02,754 [INFO] aiogram.event — Update id=743996639 is handled. Duration 208 ms by bot id=8560066018
+2026-05-31 12:31:03,900 [INFO] aiogram.event — Update id=743996640 is handled. Duration 136 ms by bot id=8560066018
+2026-05-31 12:31:04,961 [INFO] aiogram.event — Update id=743996641 is handled. Duration 202 ms by bot id=8560066018
+2026-05-31 12:31:05,944 [INFO] aiogram.event — Update id=743996642 is handled. Duration 140 ms by bot id=8560066018
+2026-05-31 12:31:07,187 [INFO] handlers.admin — Уведомление об заказе #3 отправлено менеджеру.
+2026-05-31 12:31:08,060 [INFO] services.sheets — [Google Sheets] Заказ #3 записан.
+2026-05-31 12:31:08,162 [INFO] aiogram.event — Update id=743996643 is handled. Duration 1145 ms by bot id=8560066018
+2026-05-31 12:31:20,957 [INFO] aiogram.event — Update id=743996644 is not handled. Duration 1 ms by bot id=8560066018
+2026-05-31 12:31:25,321 [INFO] aiogram.event — Update id=743996645 is handled. Duration 163 ms by bot id=8560066018
+2026-05-31 12:31:56,194 [ERROR] middlewares.error_handler — Необработанная ошибка: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/handlers/start.py", line 211, in choose_type
+    await call.message.edit_text(
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/bot.py", line 504, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-05-31 12:31:56,208 [ERROR] middlewares.error_handler — Необработанная ошибка: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/handlers/start.py", line 211, in choose_type
+    await call.message.edit_text(
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/bot.py", line 504, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-05-31 12:31:56,231 [INFO] aiogram.event — Update id=743996646 is handled. Duration 223 ms by bot id=8560066018
+2026-05-31 12:31:56,241 [ERROR] middlewares.error_handler — Необработанная ошибка: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/handlers/start.py", line 211, in choose_type
+    await call.message.edit_text(
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/bot.py", line 504, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-05-31 12:31:56,257 [ERROR] middlewares.error_handler — Необработанная ошибка: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/handlers/start.py", line 211, in choose_type
+    await call.message.edit_text(
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/bot.py", line 504, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/avito_bot/venv/lib64/python3.11/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-05-31 12:31:56,360 [INFO] aiogram.event — Update id=743996648 is handled. Duration 304 ms by bot id=8560066018
+2026-05-31 12:31:56,425 [INFO] aiogram.event — Update id=743996649 is handled. Duration 370 ms by bot id=8560066018
+2026-05-31 12:31:56,498 [INFO] aiogram.event — Update id=743996647 is handled. Duration 443 ms by bot id=8560066018
+2026-05-31 12:31:56,560 [INFO] aiogram.event — Update id=743996650 is handled. Duration 504 ms by bot id=8560066018
+2026-05-31 12:32:25,497 [INFO] aiogram.event — Update id=743996651 is handled. Duration 209 ms by bot id=8560066018
+2026-05-31 12:32:26,017 [INFO] aiogram.event — Update id=743996652 is handled. Duration 83 ms by bot id=8560066018
+2026-05-31 12:32:30,669 [INFO] aiogram.event — Update id=743996653 is handled. Duration 150 ms by bot id=8560066018
+2026-05-31 12:32:31,408 [INFO] aiogram.event — Update id=743996654 is handled. Duration 145 ms by bot id=8560066018
+2026-05-31 12:32:31,822 [INFO] aiogram.event — Update id=743996655 is handled. Duration 180 ms by bot id=8560066018
+2026-05-31 12:32:32,397 [INFO] aiogram.event — Update id=743996656 is handled. Duration 217 ms by bot id=8560066018
+2026-05-31 12:32:33,169 [INFO] aiogram.event — Update id=743996657 is handled. Duration 120 ms by bot id=8560066018
+2026-05-31 12:32:35,775 [INFO] aiogram.event — Update id=743996659 is not handled. Duration 1 ms by bot id=8560066018
+2026-05-31 12:32:35,920 [INFO] aiogram.event — Update id=743996658 is handled. Duration 301 ms by bot id=8560066018
+2026-05-31 12:32:36,208 [INFO] aiogram.event — Update id=743996660 is handled. Duration 191 ms by bot id=8560066018
+2026-05-31 12:32:41,423 [INFO] aiogram.event — Update id=743996661 is handled. Duration 118 ms by bot id=8560066018
+2026-05-31 12:32:47,437 [INFO] aiogram.event — Update id=743996662 is handled. Duration 133 ms by bot id=8560066018
